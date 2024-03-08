@@ -1,3 +1,10 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Testing/TileMap.gd" type="Script" id=1]
 
 [node name="Testing" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+cell_size = Vector2( 16, 16 )
+format = 1
+script = ExtResource( 1 )
