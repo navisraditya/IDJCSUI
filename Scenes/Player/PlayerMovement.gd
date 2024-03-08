@@ -33,8 +33,7 @@ func _input(event):
 func move_player():
 	var new_pos = self.position + (dir * cell_size/2)
 	var con_pos = convert_pos(new_pos)
-	var grid_pos = tilemap.world_to_map(con_pos)  # Convert isometric position to grid position
-	var tile_id = tilemap.get_cell(grid_pos.x, grid_pos.y)
+	var tile_id = tilemap.check_tile_id(con_pos)
 	
 	if tile_id in tilemap.walkable_tile_id:
 		self.position = new_pos
