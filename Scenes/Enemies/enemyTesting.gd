@@ -2,14 +2,11 @@ extends KinematicBody2D
 
 var dir = Vector2.ZERO
 var cell_size
-export(NodePath) var  tilemap_path
-var tilemap = null
+var tilemap
 
 func _ready():
-	if tilemap_path:
-		tilemap = get_node(tilemap_path)
-		if tilemap:
-			cell_size = tilemap.cell_size
+	tilemap = $"/root/Testing/TileMap"
+	cell_size = tilemap.cell_size
 
 func _input(event):
 	if event.is_action_pressed("ui_left"):
