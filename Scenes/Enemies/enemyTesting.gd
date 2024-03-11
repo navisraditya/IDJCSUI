@@ -52,7 +52,7 @@ func move_enemy():
 		if tile_id in tilemap.walkable_tile_ids:
 			self.position = new_pos
 		else:
-			print("enemy Cannot move there")
+			random_movement()
 	else:
 		print("Tilemap not assigned.")
 
