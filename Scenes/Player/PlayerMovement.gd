@@ -2,8 +2,9 @@ extends KinematicBody2D
 
 var dir = Vector2.ZERO
 var cell_size
-export(NodePath) var  tilemap_path
+export(NodePath) var tilemap_path
 var tilemap = null
+var has_moved : bool = false
 
 func _ready():
 	if tilemap_path:
@@ -35,6 +36,7 @@ func move_player():
 	
 	if tile_id in tilemap.walkable_tile_ids:
 		self.position = new_pos
+		
 	else:
 		print("Cannot move there")
 
@@ -43,3 +45,6 @@ func convert_to_tilemap_pos(pos: Vector2):
 	var tilemap_origin = tilemap.world_to_map(Vector2.ZERO)
 	var tilemap_pos = tilemap.world_to_map(pos)
 	return tilemap_pos - tilemap_origin
+
+func play_turn():
+	has_moved = false
