@@ -1,10 +1,11 @@
-extends KinematicBody2D
+extends Area2D
 
 var dir = Vector2.ZERO
 var cell_size
 export(NodePath) var tilemap_path
 var tilemap = null
 var randomInteger
+var move_timer
 
 func _ready():
 	if tilemap_path:
@@ -12,7 +13,12 @@ func _ready():
 		if tilemap:
 			cell_size = tilemap.cell_size
 			
-func _process(delta):
+	move_timer = Timer.new()
+	add_child(move_timer)
+	move_timer.connect("timeout", self, "_on_move_timer_timeout")
+	move_timer.start(1)
+
+func _on_move_timer_timeout():
 	random_movement()
 
 func random_movement():
@@ -51,8 +57,10 @@ func move_enemy():
 		
 		if tile_id in tilemap.walkable_tile_ids:
 			self.position = new_pos
+			# True condition
 		else:
 			random_movement()
+			
 	else:
 		print("Tilemap not assigned.")
 
@@ -64,3 +72,9 @@ func convert_to_tilemap_pos(pos: Vector2):
 	else:
 		print("Tilemap not assigned.")
 		return Vector2.ZERO
+
+
+
+func _on_Enemy_body_entered(body):
+	if body.get_name() == "Player":
+		print("kalah")
