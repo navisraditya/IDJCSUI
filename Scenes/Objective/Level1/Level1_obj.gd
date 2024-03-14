@@ -6,7 +6,7 @@ var status = false
 
 func _on_Objective_body_entered(body):
 	nextObj = get_parent().get_node("ObjLevelUp")
-	if body.get_name() == "Player":
+	if body.get_name() == "Player" and status == false:
 		status = true
 		print("oke")
 		nextObj.show()
