@@ -21,3 +21,4 @@ shape = SubResource( 1 )
 enabled = false
 texture = ExtResource( 3 )
 texture_scale = 2.5
+mode = 2
