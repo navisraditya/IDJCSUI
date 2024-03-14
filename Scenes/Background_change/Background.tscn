@@ -11,11 +11,9 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="Node2D"]
-margin_left = -511.0
-margin_top = -299.0
-margin_right = 511.0
-margin_bottom = 299.0
+margin_left = -512.0
+margin_top = -298.0
+margin_right = 509.0
+margin_bottom = -172.0
+rect_scale = Vector2( 1, 4.76 )
 script = ExtResource( 1 )
-__meta__ = {
-"_editor_description_": ""
-}
