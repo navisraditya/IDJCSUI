@@ -7,6 +7,7 @@ var tilemap = null
 var randomInteger
 var move_timer
 
+
 func _ready():
 	if tilemap_path:
 		tilemap = get_node(tilemap_path)
@@ -63,6 +64,7 @@ func move_enemy():
 			
 	else:
 		print("Tilemap not assigned.")
+	
 
 func convert_to_tilemap_pos(pos: Vector2):
 	if tilemap:

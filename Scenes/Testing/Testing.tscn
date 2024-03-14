@@ -26,9 +26,11 @@ z_index = 2
 tilemap_path = NodePath("../TileMap")
 
 [node name="Objective" parent="." instance=ExtResource( 5 )]
-position = Vector2( 96, 35 )
-z_index = 2
+position = Vector2( 96, 40 )
+z_index = 1
 
 [node name="ObjLevelUp" parent="." instance=ExtResource( 3 )]
-position = Vector2( -16, 92 )
-z_index = 2
+position = Vector2( -16, 96 )
+z_index = 1
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
