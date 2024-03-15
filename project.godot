@@ -24,11 +24,16 @@ config/name="unnamed"
 run/main_scene="res://Scenes/Scenery/LandingPage.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+AudioPlayer="*res://Scenes/Scenery/AudioPlayer.tscn"
+
 [display]
 
 window/size/width=1920
 window/size/height=1080
 window/size/resizable=false
+window/size/fullscreen=true
 
 [gui]
 
