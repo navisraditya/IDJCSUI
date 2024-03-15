@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Enemies/enemyTesting.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Image/enemy_ss.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Image/shadow.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
@@ -47,10 +48,14 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 0, 7 )
+texture = ExtResource( 3 )
+
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 9 )
 animation = "idle"
-frame = 2
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

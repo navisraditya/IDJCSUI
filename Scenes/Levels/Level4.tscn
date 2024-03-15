@@ -43,12 +43,12 @@ z_index = 2
 tilemap_path = NodePath("../TileMap")
 
 [node name="Enemy2" parent="." instance=ExtResource( 8 )]
-position = Vector2( -112, -56 )
+position = Vector2( 112, -56 )
 z_index = 2
 tilemap_path = NodePath("../TileMap")
 
 [node name="Enemy3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 0, -112 )
+position = Vector2( 112, -56 )
 z_index = 2
 tilemap_path = NodePath("../TileMap")
 
