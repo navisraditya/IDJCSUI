@@ -4,9 +4,11 @@ var dir = Vector2.ZERO
 var cell_size
 export(NodePath) var tilemap_path
 var tilemap = null
-var has_moved : bool = false
+var animatedSprite
+
 
 func _ready():
+	animatedSprite = get_node("Sprite").play("idle")
 	if tilemap_path:
 		tilemap = get_node(tilemap_path)
 		if tilemap:
@@ -46,5 +48,3 @@ func convert_to_tilemap_pos(pos: Vector2):
 	var tilemap_pos = tilemap.world_to_map(pos)
 	return tilemap_pos - tilemap_origin
 
-func play_turn():
-	has_moved = false
