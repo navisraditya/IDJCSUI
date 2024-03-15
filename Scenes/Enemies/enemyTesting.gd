@@ -8,7 +8,6 @@ var randomInteger
 var move_timer
 var animatedSprite
 
-
 func _ready():
 	animatedSprite = get_node("Sprite").play("idle")
 	if tilemap_path:
@@ -80,5 +79,6 @@ func convert_to_tilemap_pos(pos: Vector2):
 
 
 func _on_Enemy_body_entered(body):
-	if body.get_name() == "Player":
+	if body.get_name() == "Player" and get_parent().get_node("Player").can_move == true:
+		get_parent().get_node("Player").death()
 		print("kalah")
