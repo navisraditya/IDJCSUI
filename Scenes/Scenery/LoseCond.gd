@@ -1,6 +1,5 @@
-extends CanvasLayer
+extends TextureButton
 
 
-
-func _on_TextureRect_pressed():
+func _on_TextureBtn_pressed():
 	get_tree().change_scene(str("res://Scenes/Scenery/LandingPage.tscn"))
