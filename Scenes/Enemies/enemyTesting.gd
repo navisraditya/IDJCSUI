@@ -6,9 +6,11 @@ export(NodePath) var tilemap_path
 var tilemap = null
 var randomInteger
 var move_timer
+var animatedSprite
 
 
 func _ready():
+	animatedSprite = get_node("Sprite").play("idle")
 	if tilemap_path:
 		tilemap = get_node(tilemap_path)
 		if tilemap:
