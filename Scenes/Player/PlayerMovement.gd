@@ -62,5 +62,4 @@ func death():
 func _on_pause_timeout():
 	get_node("Sprite2").hide()
 	# Pause all processes in the scene
-	get_tree().paused = true
 	get_tree().change_scene(str("res://Scenes/Scenery/LoseCond.tscn"))

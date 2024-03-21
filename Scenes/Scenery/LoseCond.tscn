@@ -9,6 +9,7 @@ size = 512
 font_data = ExtResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 2 )
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 margin_right = 1920.0
@@ -26,7 +27,6 @@ texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 1 )
 texture_disabled = ExtResource( 1 )
 texture_focused = ExtResource( 1 )
-script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 813.0
@@ -38,4 +38,4 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Click anywhere to continue"
 
-[connection signal="pressed" from="PanelContainer/Control/TextureBtn" to="PanelContainer/Control/TextureBtn" method="_on_TextureBtn_pressed"]
+[connection signal="pressed" from="PanelContainer/Control/TextureBtn" to="." method="_on_TextureBtn_pressed"]
