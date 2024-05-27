@@ -12,4 +12,4 @@ Muhammad Navis Raditya Riayatsyah
    - Pemain kini dapat menggerakkan sprite utama dengan menggunakan tombol WASD
 
 well, instead of polishing (mine's polished since deadline yo), i added a new feature after level 4. this is about an endless mode. though the scoring system still broke untill now... but its there :D
-(p.s. i havent added this level to the level select :D) -- it's up to you to include this to the scoring system or not i was just bored at class since i got nothing else to polish :3
+(p.s. i havent added this level to the level select :D) -- it's up to you to include this to the scoring system or not i was just bored in class since i got nothing else to polish :3
