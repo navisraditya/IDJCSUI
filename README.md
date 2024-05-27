@@ -7,4 +7,6 @@ Muhammad Navis Raditya Riayatsyah
 
 2. Cheat Code; Diimplementasikan bersamaan dengan fitur God Mode. Pemain tidak akan mati bahkan ketika pemain bersentuhan dengan musuh. Pemain dapat mengakses fitur God Mode ini dengan menekan tombol SPACEBAR sebanyak 5 kali dan pemain juga dapat mematikannya dengan menekan tombol yang sama sebanyak 5 kali.
 
-3. 
+3. Polishing:
+   - Apabila pemain mengakses God Mode, AnimatedSprite Player akan berubah warna
+   - Pemain kini dapat menggerakkan sprite utama dengan menggunakan tombol WASD
