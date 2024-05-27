@@ -19,19 +19,19 @@ func _ready():
 
 func _input(event):
 	if can_move:
-		if event.is_action_pressed("ui_left"):
+		if event.is_action_pressed("ui_left") or event.is_action_pressed("a"):
 			dir = Vector2(-1, -1)  # Diagonal movement for isometric left
 			move_player()
 
-		if event.is_action_pressed("ui_right"):
+		if event.is_action_pressed("ui_right") or event.is_action_pressed("d"):
 			dir = Vector2(1, 1)  # Diagonal movement for isometric right
 			move_player()
 
-		if event.is_action_pressed("ui_up"):
+		if event.is_action_pressed("ui_up") or event.is_action_pressed("w"):
 			dir = Vector2(1, -1)  # Diagonal movement for isometric up
 			move_player()
 
-		if event.is_action_pressed("ui_down"):
+		if event.is_action_pressed("ui_down") or event.is_action_pressed("s"):
 			dir = Vector2(-1, 1)  # Diagonal movement for isometric down
 			move_player()
 		
