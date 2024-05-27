@@ -26,14 +26,29 @@ current = true
 zoom = Vector2( 0.25, 0.25 )
 
 [node name="Label" type="Label" parent="Player/Camera2D"]
-margin_left = -232.0
-margin_top = -128.0
-margin_right = 196.0
-margin_bottom = 23.0
+margin_left = -984.0
+margin_top = -187.0
+margin_right = -553.0
+margin_bottom = -36.0
 rect_scale = Vector2( 0.05, 0.05 )
+rect_pivot_offset = Vector2( 800, 80 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Level 4"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label2" type="Label" parent="Player/Camera2D"]
+margin_left = -984.0
+margin_top = -197.0
+margin_right = -124.0
+margin_bottom = -46.0
+rect_scale = Vector2( 0.05, 0.05 )
+rect_pivot_offset = Vector2( 800, 80 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Endless Level!"
 __meta__ = {
 "_editor_description_": ""
 }
@@ -144,9 +159,9 @@ mode = 2
 [connection signal="body_entered" from="ObjLevelUp2" to="." method="_on_ObjLevelUp2_body_entered"]
 [connection signal="body_entered" from="Objective3" to="." method="_on_Objective_body_entered"]
 [connection signal="body_entered" from="Objective3" to="." method="_on_Objective3_body_entered"]
-[connection signal="body_entered" from="ObjLevelUp3" to="." method="_on_ObjLevelUp_body_entered"]
 [connection signal="body_entered" from="ObjLevelUp3" to="." method="_on_ObjLevelUp3_body_entered"]
+[connection signal="body_entered" from="ObjLevelUp3" to="." method="_on_ObjLevelUp_body_entered"]
 [connection signal="body_entered" from="Objective4" to="." method="_on_Objective_body_entered"]
 [connection signal="body_entered" from="Objective4" to="." method="_on_Objective4_body_entered"]
-[connection signal="body_entered" from="ObjLevelUp4" to="." method="_on_ObjLevelUp_body_entered"]
 [connection signal="body_entered" from="ObjLevelUp4" to="." method="_on_ObjLevelUp4_body_entered"]
+[connection signal="body_entered" from="ObjLevelUp4" to="." method="_on_ObjLevelUp_body_entered"]
