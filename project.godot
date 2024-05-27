@@ -21,7 +21,8 @@ _global_script_class_icons={
 [application]
 
 config/name="unnamed"
-run/main_scene="res://Scenes/Scenery/LandingPage.tscn"
+run/main_scene="res://Scenes/Scenery/SplashScreen.tscn"
+boot_splash/image="res://Assets/Materials/Splash_1.png"
 config/icon="res://icon.png"
 
 [autoload]
