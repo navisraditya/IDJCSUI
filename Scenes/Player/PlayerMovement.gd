@@ -7,6 +7,9 @@ var tilemap = null
 var animatedSprite
 var can_move = true
 
+var god_mode = false
+var god_counter = 0
+
 func _ready():
 	animatedSprite = get_node("Sprite").play("idle")
 	if tilemap_path:
@@ -31,6 +34,12 @@ func _input(event):
 		if event.is_action_pressed("ui_down"):
 			dir = Vector2(-1, 1)  # Diagonal movement for isometric down
 			move_player()
+		
+		if event.is_action_pressed("ui_select"):
+			god_counter += 1
+			
+			if god_counter == 5:
+				god_mode()
 
 func move_player():
 	var new_pos = self.position + (dir * cell_size / 2)
@@ -63,3 +72,13 @@ func _on_pause_timeout():
 	get_node("Sprite2").hide()
 	# Pause all processes in the scene
 	get_tree().change_scene(str("res://Scenes/Scenery/LoseCond.tscn"))
+
+func god_mode():
+	if god_mode == false:
+		god_mode = true
+		god_counter = 0
+		animatedSprite = get_node("Sprite").play("god")
+	else:
+		god_mode = false
+		god_counter = 0
+		animatedSprite = get_node("Sprite").play("idle")

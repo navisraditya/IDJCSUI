@@ -1,9 +1,9 @@
 extends Node2D
 
 # Time to display the splash screen (in seconds)
-onready var slide1 = $Sprite
-onready var slide2 = $Sprite2
-onready var slide3 = $Sprite3
+onready var slide1 = $Splash1
+onready var slide2 = $Splash2
+onready var slide3 = $Splash3
 
 var timer = Timer.new()
 
